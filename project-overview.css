@@ -1,0 +1,243 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    background-color: #0d0d0d; /* Dark cyberpunk backdrop */
+    color: #0ff0fc; /* Neon cyan text */
+    padding: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+hr.divider {
+    border: none;
+    height: 2px;
+    background-color: #f72585; /* Neon pink */
+    margin: 1rem 0;
+}
+
+/* Header */
+header {
+    background-color: #3a0ca3; /* Neon purple */
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(58, 12, 163, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Sections */
+section {
+    background: #161616; /* Dark panel */
+    border: 1px solid #333;
+    color: #8effc1; /* Neon green text */
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 15px rgba(0, 255, 145, 0.4);
+    max-width: 100%;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f72585; /* Neon pink */
+    text-shadow: 0 0 10px #f72585, 0 0 20px #f72585;
+}
+
+section p {
+    color: #aaa;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Lists */
+ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #0ff0fc;
+    margin-bottom: 0.5rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #161616;
+    color: #0ff0fc;
+    border: 1px solid #333;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #3a0ca3;
+    color: #fff;
+}
+
+/* Buttons/Links */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff0099; /* Neon pink */
+    color: #0ff0fc; /* Neon cyan */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 153, 0.5);
+}
+
+a:hover {
+    background-color: #f72585; /* Brighter pink */
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p, ul li {
+        font-size: 1rem;
+    }
+
+    a {
+        padding: 8px 12px;
+    }
+}
+
+/* Cards Section */
+.cards-section {
+    padding: 40px 20px;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Card Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(145deg, #3a0ca3, #240046);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(247, 37, 133, 0.6);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+/* Hover Effect for Card */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(15, 240, 252, 0.8);
+    z-index: 5;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Content Area */
+.card .content {
+    padding: 20px;
+}
+
+.card .content h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 0 5px #0ff0fc;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Text */
+.card:hover .content h3 {
+    color: #f72585; /* Neon pink on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+.Design {
+    background: #0d0d0d;
+    color: #0ff0fc;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 145, 0.5);
+}
+.Design img{
+    rotate: -90deg;
+    height: 100%;
+    height: 600px;
+    object-fit: fill;
+    transition: transform 0.3s ease;
+}
+.Design:hover img{
+    transform: scale(1.1);
+}

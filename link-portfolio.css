@@ -1,0 +1,153 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0f7fa;
+    background-color: #373b43;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+hr.divider {
+    border: none;
+    height: 2px;
+    background-color: #ff79c6;
+    margin: 1rem 0;
+}
+.cards h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #0ef6cc;
+}   
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0ef6cc;
+    color: #0d1117;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #00c6a7;
+    color: #fff;
+}
+
+/* General Reset */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cards Section */
+.cards-section {
+    padding: 20px;
+    background: #161b22;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Card Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts to screen size */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(145deg, #1f2937, #0d1117);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+/* Hover Effect for Card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5);
+    z-index: 5;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.8);
+}
+
+.card img:hover {
+    filter: brightness(1);
+}
+
+/* Content Area */
+.card .content {
+    padding: 20px;
+}
+
+.card .content h3 {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #0ef6cc;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Text */
+.card:hover .content h3 {
+    color: #00c6a7;
+}
+
+/* Animated Button Links */
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff79c6;
+    color: #0d1117;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.card a:hover {
+    background-color: #f5009b;
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        transform: none; /* Remove hover movement on smaller screens */
+        box-shadow: none; /* Simplify design for mobile */
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
